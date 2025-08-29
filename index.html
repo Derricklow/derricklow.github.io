@@ -7,10 +7,29 @@
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	<link rel="stylesheet" href="fontawesome-pro/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="app.css">
+	<script src="app.js" defer></script>
 </head>
 <body class="bg-[#F6F7F9]">
-	<header class="xl:pt-10 lg:pt-10 pt-0">
-		<nav class="mx-auto px-10 py-6 bg-[#FFFFFF] rounded-xl xl:w-[1200px] lg:w-[960px] w-full">
+	<header id="sticky-header" class="sticky top-0 w-full bg-white transition-all duration-200
+ease-in -translate-y-full z-10 shadow-md">
+		<div class="mx-auto px-10 py-6 bg-white rounded-xl xl:w-[1200px] lg:w-[960px] w-full">
+		    <div class="flex justify-between items-center">
+		    	<div>
+		    		<i class="fas fa-skull-cow text-2xl me-2"></i>
+		      		<span class="font-bold text-xl">Derrick Low</span>
+		    	</div>
+	        	<ul class="flex gap-8">
+	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease" href="#">About</a></li>
+	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease"href="#">Experiences</a></li>
+	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease" href="#">Projects</a></li>
+	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease" href="#">Company</a></li>
+	        	</ul>
+		    </div>
+		</div>
+	</header>
+	
+	<header class="-mt-5 animate-fadeIn">
+		<nav class="mx-auto px-10 py-6 bg-white rounded-xl xl:w-[1200px] lg:w-[960px] w-full">
 		    <div class="flex justify-between items-center">
 		    	<div>
 		    		<i class="fas fa-skull-cow text-2xl me-2"></i>
@@ -25,30 +44,45 @@
 		    </div>
 		</nav>
 	</header>
-	<!-- Full width header, after scrolldown then fade down -->
-	<!-- <header class="sticky top-0">123</header> -->
+
   	<main>
   		<section class="container m-auto xl:w-[1200px] lg:w-[960px] w-full">
   			<div class="pt-20 pb-40 flex flex-wrap items-center justify-center">
-  				<div class="xl:w-1/2 lg:w-1/2 w-full overflow-hidden xl:mb-0 lg:mb-0 mb-10">
+  				<div class="xl:w-1/2 lg:w-1/2 w-full xl:mb-0 lg:mb-0 mb-10">
   					<div class="flex items-center justify-center">
-  						<img class="object-cover rounded-full xl:h-[30rem] xl:w-[30rem] lg:h-[25rem] lg:w-[25rem] md:h-[30rem] md:w-[30rem]" src="img/derrick.jpg" alt="Avatar">
+  						<img id="hero-image" class="object-cover rounded-full xl:h-[30rem] xl:w-[30rem] lg:h-[25rem] lg:w-[25rem] md:h-[30rem] md:w-[30rem] animate-fadeInUp fadeIn-delay-1" src="img/derrick.jpg" alt="Avatar">
   					</div>
   				</div>
   				<div class="xl:w-1/2 lg:w-1/2 w-full flex flex-col justify-center">
   					<div class="xl:w-4/5 w-full">
-	  					<h1 class="font-bold text-5xl mb-8 text-[#343f52] xl:text-left lg:text-left text-center">
+	  					<h1 class="font-bold text-5xl mb-8 text-[#343f52] xl:text-left lg:text-left text-center animate-fadeInUp fadeIn-delay-2">
 	  						I'm <span class="text-emerald-500">Web Developer</span>
 	  					</h1>
-	  					<p class="text-3xl xl:tracking-wide xl:leading-10 text-[#60697B] xl:text-left lg:text-left text-center lg:w-full w-4/5 m-auto">Hello! I'm Derrick, a freelance web developer based in Johor Bahru. I'm very passionate about the work that I do.</p>
+	  					<p class="text-gray-500 text-2xl xl:tracking-wide xl:leading-10 xl:text-left lg:text-left text-center lg:w-full w-4/5 m-auto xl:mb-6 mb-10 animate-fadeInUp fadeIn-delay-3">
+							Hello! I'm Derrick, a freelance web developer based in Johor Bahru. I'm very passionate about the work that I do.
+						</p>
   					</div>
+					<div class="flex items-center xl:gap-6 gap-20 flex-wrap xl:justify-start justify-center mb-6">
+						<div class="text-center">
+							<p class="text-4xl font-bold text-[#343f52] mb-2 animate-fadeInUp fadeIn-delay-4">3 years</p>
+							<p class="text-sm text-gray-500 animate-fadeInUp fadeIn-delay-5">Experience</p>
+						</div>
+						<div class="text-center">
+							<p class="text-4xl font-bold text-[#343f52] mb-2 animate-fadeInUp fadeIn-delay-4">10+</p>
+							<p class="text-sm text-gray-500 animate-fadeInUp fadeIn-delay-5">Team projects</p>
+						</div>
+						<div class="text-center">
+							<p class="text-4xl font-bold text-[#343f52] mb-2 animate-fadeInUp fadeIn-delay-4">5</p>
+							<p class="text-sm text-gray-500 animate-fadeInUp fadeIn-delay-5">Featured works</p>
+						</div>
+					</div>
   				</div>
   			</div>
   		</section>
 
   		<section class="py-32 bg-white">
   			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full">
-	  			<div class="flex flex-wrap mb-15">
+	  			<div class="flex flex-wrap mb-15 fadeIn-observer" style="--delay: 0.5s;">
 	  				<div class="xl:w-1/2 w-full xl:mb-0 mb-10 xl:pe-5 px-3">
 	  					<p class="text-4xl font-bold text-[#343f52] mb-5">What I Do ?</p>
 	  					<p class="text-xl text-gray-500" style="line-height: 1.7;">
@@ -59,21 +93,21 @@
 	  				</div>
 	  				<div class="xl:w-1/2 w-full xl:ps-5 px-3">
 	  					<ul>
-	  						<li class="mb-7">
+	  						<li class="mb-7 counter-observer" data-target="90">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Frontend Development</span>
-			  							<span class="text-gray-500">90%</span>
+			  							<span class="text-gray-500 counter"></span>
 			  						</div>
 			  						<div class="relative">
-			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle" viewBox="0 0 100 6" preserveAspectRatio="none">
+			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle progress" viewBox="0 0 100 6" preserveAspectRatio="none">
 			  								<path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
 			  								<path d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 10;"></path>
 			  							</svg>
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<li class="mb-7">
+	  						<!-- <li class="mb-7 counter-observer">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Backend Development</span>
@@ -87,7 +121,7 @@
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<li class="mb-7">
+	  						<li class="mb-7 counter-observer">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Problem Solving</span>
@@ -101,7 +135,7 @@
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<li class="mb-7">
+	  						<li class="mb-7 counter-observer">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">System Integration</span>
@@ -114,33 +148,33 @@
 			  							</svg>
 			  						</div>
 			  					</div>
-	  						</li>
+	  						</li> -->
 	  					</ul>
 	  				</div>
 	  			</div>
 	  			<div class="flex flex-wrap">
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 0.5s;">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-code text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Frontend</p>
 	  						<p class="text-gray-500 text-center">Specialize in building responsive, interactive, and user-friendly interfaces using modern front-end technologies</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 0.75s;">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-brackets-curly text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Backend</p>
 	  						<p class="text-gray-500 text-center">Building webapp & SaaS with database relationships, RESTful APIs</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 1s;">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-lightbulb-on text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Problem Solving</p>
 	  						<p class="text-gray-500 text-center">Writing clean & readable code. Enjoy solving technical challenges through thoughtful debugging, refactoring, and optimization</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 1.25s;">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-cogs text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">System Integration</p>
@@ -152,7 +186,7 @@
   		</section>
 
 		<section id="experiences" class="bg-white py-32">
-			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full">
+			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full fadeIn-observer">
 				<p class="text-center text-emerald-500 font-bold text-2xl mb-8">Project Experiences</p>
 				<p class="text-center font-bold text-3xl tracking-wide leading-10 mb-20">I have collaborated with various teams to deliver impactful projects.</p>
 
@@ -230,7 +264,7 @@
 									<i class="fab fa-js text-3xl me-3" style="color:#F7DF1E;"></i>
 									<i class="fab fa-laravel text-3xl me-3" style="color:#FF2D20;"></i>
 									<i class="fab fa-vuejs text-3xl me-3" style="color: #42b883;"></i>
-									<img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="80" src="img/cordova_logo_normal_large.png" />
+									<img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="80" src="img/cordova-icon.png" />
 								</div>
 							</div>
 							<ul class="list-disc text-gray-500 text-sm px-3">
@@ -255,7 +289,7 @@
 							<div class="mb-3">
 								<h5 class="text-gray-600 font-bold mb-2">Tech</h5>
 								<div>
-									<img alt="VBA Logo" width="40" src="img/vba-iconpng.png" />
+									<img alt="VBA Logo" width="40" src="img/vba-icon.png" />
 								</div>
 							</div>
 							<ul class="list-disc text-gray-500 text-sm px-3">
@@ -286,7 +320,7 @@
 									<i class="fab fa-js text-3xl me-3" style="color:#F7DF1E;"></i>
 									<i class="fab fa-laravel text-3xl me-3" style="color:#FF2D20;"></i>
 									<i class="fab fa-vuejs text-3xl me-3" style="color: #42b883;"></i>
-									<img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="80" src="img/cordova_logo_normal_large.png" />
+									<img alt="Mysql Logo" class="object-content" Can style="height: 60px;" src="img/mysql-icon.png" />
 								</div>
 							</div>
 							<ul class="list-disc text-gray-500 text-sm px-3">
@@ -296,17 +330,14 @@
 							</ul>
 						</div>
 					</div>
-
-					<div class="w-full px-4 mt-4">
-						<div class="bg-emerald-50 border border-emerald-100 p-6 rounded-lg text-center">
-							<p class="font-semibold text-emerald-600 mb-2">Want to collaborate?</p>
-							<p class="text-gray-600 mb-4">I enjoy team work and contributing to UI and frontend architecture — available for freelance or team roles.</p>
-							<a href="mailto:YOUR_EMAIL_HERE" class="inline-block bg-emerald-500 text-white px-4 py-2 rounded">Contact me</a>
-						</div>
-					</div>
 				</div>
 			</div>
 		</section>
   	</main>
+	<footer>
+		<div class="text-center p-6 bg-gray-300">
+			<span class="text-gray-500">© 2024 Derrick Low. All rights reserved.</span>
+		</div>
+	</footer>
 </body>
 </html>

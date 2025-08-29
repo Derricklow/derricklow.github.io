@@ -4,3 +4,71 @@ html {
 	box-sizing: border-box;
 	font-family: "Manrope", sans-serif;
 }
+
+.animate-fadeInUp { /* Fade in effect for first section */
+	opacity: 0;
+	animation: fadeInUp;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.animate-fadeIn { /* Fade in effect for Header */
+	opacity: 0;
+	animation: fadeIn;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+.fadeIn-observer {
+	opacity: 0;
+	animation: fadeIn;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	animation-delay: var(--delay, 0s);
+}
+
+.fadeIn-observer.active {
+	animation-play-state: running;
+}
+
+.fadeInUp-observer {
+	opacity: 0;
+	animation: fadeInUp;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-play-state: paused;
+	animation-delay: var(--delay, 0s);
+}
+
+.fadeInUp-observer.active {
+	animation-play-state: running;
+}
+
+.fadeIn-delay-1 { animation-delay: 0.5s;}
+.fadeIn-delay-2 { animation-delay: 1s;}
+.fadeIn-delay-3 { animation-delay: 1.25s;}
+.fadeIn-delay-4 { animation-delay: 1.5s;}
+.fadeIn-delay-5 { animation-delay: 1.75s;}
+
+@keyframes fadeInUp {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	50% { opacity: .5; }
+	100% { opacity: 1; }
+}
