@@ -20,6 +20,7 @@ const fadein_observer = new IntersectionObserver((entries) => {
 const count_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         countUpdate(entry.target);
+        count_observer.unobserve(entry.target);
     });
 },{ threshold: 0.7 });
 
@@ -78,3 +79,55 @@ const countUpdate = (ele) => {
 
 document.querySelectorAll('.fadeIn-observer, .fadeInUp-observer').forEach((ele) => fadein_observer.observe(ele));
 document.querySelectorAll('.counter-observer').forEach((ele) => count_observer.observe(ele));
+
+// here
+const cards = [...document.querySelectorAll('.card')];
+    let current = 2; // Start with center card
+
+    function updateCarousel() {
+      cards.forEach((card, i) => {
+        const offset = i - current;
+
+        if (offset === 0) {
+          // center card
+          card.style.width = "80%";
+          card.style.transform = `translateX(0) rotateY(0) scale(1)`;
+          card.style.opacity = 1;
+          card.style.zIndex = 3;
+          card.querySelectorAll("h2, p").forEach(el => el.style.opacity = 1);
+        } else if (offset === -1) {
+          // left card
+          card.style.width = "15%";
+          card.style.transform = `translateX(-250px) rotateY(40deg) scale(0.9)`;
+          card.style.opacity = 1;
+          card.style.zIndex = 2;
+          card.querySelectorAll("h2, p").forEach(el => el.style.opacity = 0);
+        } else if (offset === 1) {
+          // right card
+          card.style.width = "15%";
+          card.style.transform = `translateX(250px) rotateY(-40deg) scale(0.9)`;
+          card.style.opacity = 1;
+          card.style.zIndex = 2;
+          card.querySelectorAll("h2, p").forEach(el => el.style.opacity = 0);
+        } else {
+          // far cards (keep thin borders at ends)
+          card.style.width = "15%";
+          card.style.transform = `translateX(${offset * 250}px) scale(0.8) rotateY(${offset > 0 ? -40 : 40}deg)`;
+          card.style.opacity = 0.5;
+          card.style.zIndex = 1;
+          card.querySelectorAll("h2, p").forEach(el => el.style.opacity = 0);
+        }
+      });
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      current = (current + 1) % cards.length;
+      updateCarousel();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      current = (current - 1 + cards.length) % cards.length;
+      updateCarousel();
+    });
+
+    updateCarousel();

@@ -55,6 +55,58 @@ html {
 .fadeIn-delay-4 { animation-delay: 1.5s;}
 .fadeIn-delay-5 { animation-delay: 1.75s;}
 
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      height: 500px;
+      perspective: 1200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      position: absolute;
+      height: 360px;
+      background: #222;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      transition: transform 0.8s, width 0.8s, opacity 0.8s;
+      overflow: hidden;
+    }
+
+    .card h2, .card p {
+      transition: opacity 0.4s;
+    }
+
+    .controls {
+      position: absolute;
+      bottom: -60px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .controls button {
+      background: #444;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+
+    .controls button:hover {
+      background: #666;
+    }
+
 @keyframes fadeInUp {
 	0% {
 		opacity: 0;
