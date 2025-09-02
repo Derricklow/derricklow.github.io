@@ -10,8 +10,7 @@
 	<script src="app.js" defer></script>
 </head>
 <body class="bg-[#F6F7F9]">
-	<header id="sticky-header" class="sticky top-0 w-full bg-white transition-all duration-200
-ease-in -translate-y-full z-10 shadow-md">
+	<header id="sticky-header" class="sticky top-0 w-full bg-white transition-all duration-200 ease-in -translate-y-full z-10 shadow-md">
 		<div class="mx-auto px-10 py-6 bg-white rounded-xl xl:w-[1200px] lg:w-[960px] w-full">
 		    <div class="flex justify-between items-center">
 		    	<div>
@@ -82,7 +81,7 @@ ease-in -translate-y-full z-10 shadow-md">
 
   		<section class="py-32 bg-white">
   			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full">
-	  			<div class="flex flex-wrap mb-15 fadeIn-observer" style="--delay: 0.5s;">
+	  			<div class="flex flex-wrap mb-15">
 	  				<div class="xl:w-1/2 w-full xl:mb-0 mb-10 xl:pe-5 px-3">
 	  					<p class="text-4xl font-bold text-[#343f52] mb-5">What I Do ?</p>
 	  					<p class="text-xl text-gray-500" style="line-height: 1.7;">
@@ -93,88 +92,88 @@ ease-in -translate-y-full z-10 shadow-md">
 	  				</div>
 	  				<div class="xl:w-1/2 w-full xl:ps-5 px-3">
 	  					<ul>
-	  						<li class="mb-7 counter-observer" data-target="90">
+	  						<li class="mb-7 counter-observer" data-target="90" data-suffix="%">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Frontend Development</span>
 			  							<span class="text-gray-500 counter"></span>
 			  						</div>
 			  						<div class="relative">
-			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle progress" viewBox="0 0 100 6" preserveAspectRatio="none">
+			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle" viewBox="0 0 100 6" preserveAspectRatio="none">
 			  								<path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
-			  								<path d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 10;"></path>
+			  								<path class="progress" d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0"></path>
 			  							</svg>
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<!-- <li class="mb-7 counter-observer">
+	  						<li class="mb-7 counter-observer" data-target="70" data-suffix="%">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Backend Development</span>
-			  							<span class="text-gray-500">70%</span>
+			  							<span class="text-gray-500 counter"></span>
 			  						</div>
 			  						<div class="relative">
 			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle" viewBox="0 0 100 6" preserveAspectRatio="none">
 			  								<path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
-			  								<path d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 30;"></path>
+			  								<path class="progress" d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0"></path>
 			  							</svg>
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<li class="mb-7 counter-observer">
+	  						<li class="mb-7 counter-observer" data-target="80" data-suffix="%">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">Problem Solving</span>
-			  							<span class="text-gray-500">80%</span>
+			  							<span class="text-gray-500 counter"></span>
 			  						</div>
 			  						<div class="relative">
 			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle" viewBox="0 0 100 6" preserveAspectRatio="none">
 			  								<path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
-			  								<path d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 20;"></path>
+			  								<path class="progress" d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0"></path>
 			  							</svg>
 			  						</div>
 			  					</div>
 	  						</li>
-	  						<li class="mb-7 counter-observer">
+	  						<li class="mb-7 counter-observer" data-target="70" data-suffix="%">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
 			  							<span class="text-md text-gray-500 mb-3">System Integration</span>
-			  							<span class="text-gray-500">70%</span>
+			  							<span class="text-gray-500 counter"></span>
 			  						</div>
 			  						<div class="relative">
 			  							<svg class="block w-full h-[.3rem] rounded-[1rem] align-middle" viewBox="0 0 100 6" preserveAspectRatio="none">
 			  								<path d="M 0,3 L 100,3" stroke="#eee" stroke-width="6" fill-opacity="0"></path>
-			  								<path d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0" style="stroke-dasharray: 100, 100; stroke-dashoffset: 30;"></path>
+			  								<path class="progress" d="M 0,3 L 100,3" stroke="#00BC7D" stroke-width="6" fill-opacity="0"></path>
 			  							</svg>
 			  						</div>
 			  					</div>
-	  						</li> -->
+	  						</li>
 	  					</ul>
 	  				</div>
 	  			</div>
 	  			<div class="flex flex-wrap">
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 0.5s;">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-code text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Frontend</p>
 	  						<p class="text-gray-500 text-center">Specialize in building responsive, interactive, and user-friendly interfaces using modern front-end technologies</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 0.75s;">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-brackets-curly text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Backend</p>
 	  						<p class="text-gray-500 text-center">Building webapp & SaaS with database relationships, RESTful APIs</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 1s;">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-lightbulb-on text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">Problem Solving</p>
 	  						<p class="text-gray-500 text-center">Writing clean & readable code. Enjoy solving technical challenges through thoughtful debugging, refactoring, and optimization</p>
 	  					</div>
 	  				</div>
-	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5 fadeInUp-observer" style="--delay: 1.25s;">
+	  				<div class="xl:w-1/4 lg:w-1/2 w-full mb-5">
 	  					<div class="flex flex-col justify-center items-center px-5">
 	  						<i class="fal fa-cogs text-3xl mb-4"></i>
 	  						<p class="font-bold text-[#343f52] mb-4">System Integration</p>
@@ -186,7 +185,7 @@ ease-in -translate-y-full z-10 shadow-md">
   		</section>
 
 		<section id="experiences" class="bg-white py-32">
-			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full fadeIn-observer">
+			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full fadeIn-observer" style="--delay: .25s">
 				<p class="text-center text-emerald-500 font-bold text-2xl mb-8">Project Experiences</p>
 				<p class="text-center font-bold text-3xl tracking-wide leading-10 mb-20">I have collaborated with various teams to deliver impactful projects.</p>
 
