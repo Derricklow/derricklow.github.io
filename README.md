@@ -45,18 +45,6 @@ derricklow.github.io/
 3. **Tech Marquee** - Scrolling tech stack icons
 4. **Project Experiences** - Cards showcasing past work (courier apps, vehicle immobilizer, shipping app, warehouse analysis, cage dropoff/pickup)
 
-## Getting Started
-
-No build step required. Simply open `index.html` in a browser or serve with any static file server:
-
-```bash
-# Using Python
-python -m http.server 8000
-
-# Using Node.js
-npx serve .
-```
-
 ## Deployment
 
 This site is deployed automatically via [GitHub Pages](https://pages.github.com/) from the `main` branch.

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Derrick's Portfolio</title>
+	<title>Jin Hui's Portfolio</title>
 	<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 	<link rel="stylesheet" href="fontawesome-pro/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="app.css">
@@ -15,7 +15,7 @@
 		    <div class="flex justify-between items-center">
 		    	<div>
 		    		<i class="fas fa-skull-cow text-2xl me-2"></i>
-		      		<span class="font-bold xl:text-xl lg:text-xl text-md">Derrick Low</span>
+		      		<span class="font-bold xl:text-xl lg:text-xl text-md">Low Jin Hui</span>
 		    	</div>
 	        	<ul class="xl:flex lg:flex hidden gap-8">
 	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease" href="#">About</a></li>
@@ -30,12 +30,12 @@
 		</div>
 	</header>
 
-	<header id="header" class="animate-fadeIn xl:py-10 lg:py-10 py-0 z-10">
+	<header id="header" class="animate-fadeIn xl:py-10 lg:py-10 py-0 z-10 fadeInUp-observer">
 		<nav class="mx-auto px-10 py-6 bg-white xl:rounded-xl lg:rounded-xl rounded-none xl:w-[1200px] lg:w-[960px] w-full">
 		    <div class="flex justify-between items-center">
 		    	<div>
 		    		<i class="fas fa-skull-cow text-2xl me-2"></i>
-		      		<span class="font-bold xl:text-xl lg:text-xl text-md">Derrick Low</span>
+		      		<span class="font-bold xl:text-xl lg:text-xl text-md">Low Jin Hui</span>
 		    	</div>
 	        	<ul class="xl:flex lg:flex hidden gap-8">
 	          		<li><a class="text-xl transition hover:text-emerald-500 delay-150 ease" href="#">About</a></li>
@@ -55,17 +55,17 @@
   			<div class="pt-20 xl:pb-40 lg:pb-30 pb-10 flex flex-wrap items-center justify-center">
   				<div class="xl:w-1/2 lg:w-1/2 w-full xl:mb-0 lg:mb-0 mb-10">
   					<div class="flex items-center justify-center">
-  						<img id="hero-image" class="object-cover rounded-full xl:h-[30rem] xl:w-[30rem] lg:h-[25rem] lg:w-[25rem] md:h-[30rem] md:w-[30rem] animate-fadeInUp fadeIn-delay-1" src="img/derrick.jpg" alt="Avatar">
+  						<img id="hero-image" class="object-cover rounded-full xl:h-[30rem] xl:w-[30rem] lg:h-[25rem] lg:w-[25rem] md:h-[20rem] md:w-[20rem] w-[15rem] h-[15rem] animate-fadeInUp fadeIn-delay-1" src="img/derrick.jpg" alt="Avatar">
   					</div>
   				</div>
   				<div class="xl:w-1/2 lg:w-1/2 w-full flex flex-col justify-center">
   					<div class="xl:w-4/5 w-full">
 	  					<h1 class="font-bold xl:text-5xl lg:text-5xl text-3xl mb-8 text-[#343f52] xl:text-left lg:text-left text-center animate-fadeInUp fadeIn-delay-2 text-nowrap">
 	  						<span>I'm</span>
-							<span id="dynamic-text" class="text-emerald-500"></span>
+							<span id="dynamic-text" class="text-emerald-500">Derrick Low</span>
 	  					</h1>
 	  					<p class="text-gray-500 xl:text-2xl lg:text-2xl text-xl xl:tracking-wide xl:leading-10 xl:text-left lg:text-left text-center lg:w-full w-4/5 m-auto xl:mb-6 mb-10 animate-fadeInUp fadeIn-delay-3">
-							Hello! I'm Derrick, a freelance web developer based in Johor Bahru. I'm very passionate about the work that I do.
+							Hello! I'm Low Jin Hui, a web developer based in Johor Bahru. I'm very passionate about the work that I do.
 						</p>
   					</div>
 					<div class="flex items-center xl:gap-6 lg:gap-6 gap-10 flex-wrap xl:justify-start lg:justify-start justify-center mb-6">
@@ -87,18 +87,18 @@
   		</section>
 
   		<section class="xl:py-32 lg:py-24 py-16 bg-white">
-  			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full">
+  			<div class="container m-auto xl:w-[1200px] lg:w-[960px] w-full fadeIn-observer" style="--delay: .25s;">
 	  			<div class="flex flex-wrap mb-15">
 	  				<div class="xl:w-1/2 w-full xl:mb-0 mb-10 xl:pe-5 px-3">
 	  					<p class="text-4xl font-bold text-[#343f52] mb-5">What I Do ?</p>
 	  					<p class="text-xl text-gray-500" style="line-height: 1.7;">
-	  						I'm a front-end web developer with 3 years of experience crafting clean and responsive websites.
-							While front-end is my main focus, I'm also comfortable with back-end development and can work as a full-stack developer when needed.
+	  						I'm a full stack developer with 3 years of experience crafting clean and responsive websites.
+							While front-end is my main focus, I'm also comfortable with back-end development and can work both development when needed.
 							From landing pages to full web apps, I build solutions that are both functional and visually appealing.
 	  					</p>
 	  				</div>
 	  				<div class="xl:w-1/2 w-full xl:ps-5 px-3">
-	  					<ul>
+	  					<ul id="counter-list">
 	  						<li class="mb-7 counter-observer" data-target="90" data-suffix="%">
 	  							<div class="flex flex-col">
 			  						<div class="flex justify-between items-center">
@@ -191,31 +191,31 @@
   			</div>
   		</section>
 		<section class="bg-white py-20">
-			<div class="marquee-container bg-white">
-				<div class="marquee-track">
-					<div class="marquee-item"><i class="fab fa-laravel text-6xl" style="color:#FF2D20;"></i></div>
-					<div class="marquee-item"><i class="fab fa-bootstrap text-6xl" style="color:#7952B3;"></i></div>
-					<div class="marquee-item"><i class="fab fa-js text-6xl" style="color:#F7DF1E;"></i></div>
-					<div class="marquee-item"><i class="fab fa-react text-6xl" style="color: #61DAFB;"></i></div>
-					<div class="marquee-item"><i class="fab fa-html5 text-6xl" style="color:#E34F26;"></i></div>
-					<div class="marquee-item"><i class="fab fa-css3-alt text-6xl" style="color:#1572B6;"></i></div>
-					<div class="marquee-item"><i class="fab fa-vuejs text-6xl" style="color: #42b883;"></i></div>
-					<div class="marquee-item"><i class="fab fa-sass text-6xl" style="color:#CC6699;"></i></div>
-					<div class="marquee-item"><img class="bg-gray-500 object-content rounded-lg" alt="Apache Cordova Logo" style="width: 120px;" src="img/cordova-icon.png" /></div>
-					<div class="marquee-item"><img alt="Mysql Logo" class="object-content -mt-3" style="width: 120px; height: 80px;" src="img/mysql-icon.png" /></div>
-					<div class="marquee-item"><img class="-mt-3" alt="VBA Logo" width="80" src="img/vba-icon.png" /></div>
-					<!-- Repeat the items to create a continuous loop effect -->
-					<div class="marquee-item"><i class="fab fa-laravel text-6xl" style="color:#FF2D20;"></i></div> 
-					<div class="marquee-item"><i class="fab fa-bootstrap text-6xl" style="color:#7952B3;"></i></div>
-					<div class="marquee-item"><i class="fab fa-js text-6xl" style="color:#F7DF1E;"></i></div>
-					<div class="marquee-item"><i class="fab fa-react text-6xl" style="color: #61DAFB;"></i></div>
-					<div class="marquee-item"><i class="fab fa-html5 text-6xl" style="color:#E34F26;"></i></div>
-					<div class="marquee-item"><i class="fab fa-css3-alt text-6xl" style="color:#1572B6;"></i></div>
-					<div class="marquee-item"><i class="fab fa-vuejs text-6xl" style="color: #42b883;"></i></div>
-					<div class="marquee-item"><i class="fab fa-sass text-6xl" style="color:#CC6699;"></i></div>
-					<div class="marquee-item"><img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="120" src="img/cordova-icon.png" /></div>
-					<div class="marquee-item"><img alt="Mysql Logo" class="object-content -mt-3" style="width: 120px; height: 80px;" src="img/mysql-icon.png" /></div>
-					<div class="marquee-item"><img class="-mt-3" alt="VBA Logo" width="80" src="img/vba-icon.png" /></div>
+			<div class="slide-container">
+				<div class="slide-track">
+					<!-- 第一组 items -->
+					<div class="slide-item"><i class="fab fa-laravel text-6xl" style="color:#FF2D20;"></i></div>
+					<div class="slide-item"><i class="fab fa-bootstrap text-6xl" style="color:#7952B3;"></i></div>
+					<div class="slide-item"><i class="fab fa-js text-6xl" style="color:#F7DF1E;"></i></div>
+					<div class="slide-item"><i class="fab fa-react text-6xl" style="color: #61DAFB;"></i></div>
+					<div class="slide-item"><i class="fab fa-html5 text-6xl" style="color:#E34F26;"></i></div>
+					<div class="slide-item"><i class="fab fa-css3-alt text-6xl" style="color:#1572B6;"></i></div>
+					<div class="slide-item"><i class="fab fa-vuejs text-6xl" style="color: #42b883;"></i></div>
+					<div class="slide-item"><i class="fab fa-sass text-6xl" style="color:#CC6699;"></i></div>
+					<div class="slide-item"><img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="120" src="img/cordova-icon.png" /></div>
+					<div class="slide-item"><img alt="Mysql Logo" class="object-content -mt-3" style="width: 120px; height: 80px;" src="img/mysql-icon.png" /></div>
+					<div class="slide-item"><img class="-mt-3" alt="VBA Logo" width="80" src="img/vba-icon.png" /></div>
+					<div class="slide-item"><i class="fab fa-laravel text-6xl" style="color:#FF2D20;"></i></div>
+					<div class="slide-item"><i class="fab fa-bootstrap text-6xl" style="color:#7952B3;"></i></div>
+					<div class="slide-item"><i class="fab fa-js text-6xl" style="color:#F7DF1E;"></i></div>
+					<div class="slide-item"><i class="fab fa-react text-6xl" style="color: #61DAFB;"></i></div>
+					<div class="slide-item"><i class="fab fa-html5 text-6xl" style="color:#E34F26;"></i></div>
+					<div class="slide-item"><i class="fab fa-css3-alt text-6xl" style="color:#1572B6;"></i></div>
+					<div class="slide-item"><i class="fab fa-vuejs text-6xl" style="color: #42b883;"></i></div>
+					<div class="slide-item"><i class="fab fa-sass text-6xl" style="color:#CC6699;"></i></div>
+					<div class="slide-item"><img class="bg-gray-500 rounded-lg" alt="Apache Cordova Logo" width="120" src="img/cordova-icon.png" /></div>
+					<div class="slide-item"><img alt="Mysql Logo" class="object-content -mt-3" style="width: 120px; height: 80px;" src="img/mysql-icon.png" /></div>
+					<div class="slide-item"><img class="-mt-3" alt="VBA Logo" width="80" src="img/vba-icon.png" /></div>
 				</div>
 			</div>
 		</section>

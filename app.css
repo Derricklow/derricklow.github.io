@@ -64,84 +64,97 @@ html {
   animation: blink 0.8s step-end infinite;
 }
 
-.marquee-container {
+.slide-container {
   overflow: hidden;
   width: 100%;
-  transform: rotate(-3deg);
 }
 
-.marquee-track {
+.slide-track {
   display: flex;
-  gap: 30%;
-  width: 10%;
-  animation: scroll-left 5s linear infinite;
-  animation-play-state: running;
+  align-items: center;
+  width: max-content;
+  animation: infinite-slide 25s linear infinite;
 }
 
-.marquee-track:hover {
+.slide-track:hover {
   animation-play-state: paused;
+}
+
+.slide-item {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 0 4rem;
+}
+
+.slide-item img {
+  width: 100px;
+  height: 100px;
+  height: auto;
+}
+
+.slide-item i {
+  width: 100px;
+  height: 100px;
+  font-size: 5rem;
+  height: auto;
+}
+
+@keyframes infinite-slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 } 
 
-.marquee-item {
-  width: 100%;
-  /* margin: 0 1rem; */
-  /* padding: 1rem; */
-  text-align: center;
-}  
+  .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    height: 500px;
+    perspective: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .card {
+    position: absolute;
+    height: 360px;
+    background: #222;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    transition: transform 0.8s, width 0.8s, opacity 0.8s;
+    overflow: hidden;
+  }
 
+  .card h2, .card p {
+    transition: opacity 0.4s;
+  }
 
-    .carousel {
-      position: relative;
-      width: 100%;
-      max-width: 1000px;
-      height: 500px;
-      perspective: 1200px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+  .controls {
+    position: absolute;
+    bottom: -60px;
+    display: flex;
+    gap: 20px;
+  }
 
-    .card {
-      position: absolute;
-      height: 360px;
-      background: #222;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      transition: transform 0.8s, width 0.8s, opacity 0.8s;
-      overflow: hidden;
-    }
+  .controls button {
+    background: #444;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
 
-    .card h2, .card p {
-      transition: opacity 0.4s;
-    }
-
-    .controls {
-      position: absolute;
-      bottom: -60px;
-      display: flex;
-      gap: 20px;
-    }
-
-    .controls button {
-      background: #444;
-      border: none;
-      color: white;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 8px;
-      font-size: 1rem;
-      transition: background 0.3s;
-    }
-
-    .controls button:hover {
-      background: #666;
-    }
+  .controls button:hover {
+    background: #666;
+  }
 
 @keyframes fadeInUp {
 	0% {
