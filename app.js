@@ -19,6 +19,7 @@ const fadein_observer = new IntersectionObserver((entries) => {
 
 const count_observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
+        if(entry.isIntersecting){
         countUpdate(entry.target);
         count_observer.unobserve(entry.target);
     });
