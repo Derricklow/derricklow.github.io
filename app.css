@@ -3,6 +3,7 @@ html {
 	padding: 0;
 	box-sizing: border-box;
 	font-family: "Manrope", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .animate-fadeInUp { /* Fade in effect for first section */
@@ -97,6 +98,107 @@ html {
   height: 100px;
   font-size: 5rem;
   height: auto;
+}
+
+/* ===== Company Timeline ===== */
+#timeline-container {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #e5e7eb;              /* 灰色底线，适配浅色主题 */
+  transform: translateX(-50%);
+}
+
+.timeline-progress {
+  width: 100%;
+  height: 0%;
+  background: #00BC7D;
+  transition: height 0.1s linear;
+}
+
+/* 每行结构：timeline-card + timeline-center + timeline-empty */
+.timeline-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+/* 默认 order：card(1) center(2) empty(3) = 卡片在左 */
+.timeline-card  { flex: 1; padding: 0 2rem; order: 1; }
+.timeline-center { flex-shrink: 0; width: 3px; display: flex; justify-content: center; position: relative; z-index: 2; order: 2; }
+.timeline-empty { flex: 1; padding: 0 2rem; order: 3; }
+
+/* row-right：card(3) center(2) empty(1) = 卡片在右 */
+.row-right .timeline-card  { order: 3; }
+.row-right .timeline-empty { order: 1; }
+
+/* Diamond icon 替代圆点 */
+.timeline-dot {
+  font-size: 1rem;
+  color: #d1d5db;                   /* 默认灰色 */
+  transition: all 0.4s ease;
+}
+
+.timeline-dot.active {
+  color: #00BC7D;
+  filter: drop-shadow(0 0 8px rgba(0, 188, 125, 0.6));
+}
+
+/* 公司卡片 */
+.company-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  opacity: 0.3;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.company-card.active {
+  opacity: 1;
+  transform: translateY(0);
+  border-color: rgba(0, 188, 125, 0.3);
+  box-shadow: 0 4px 20px rgba(0, 188, 125, 0.1);
+}
+
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 1rem;
+  }
+
+  .timeline-card { 
+    order: 3; 
+    flex: none; 
+    width: 100%; 
+    padding: 0 0 0 2.5rem; 
+  }
+
+  .timeline-center { 
+    order: 2; 
+    position: absolute; 
+    left: 1rem; 
+    transform: translateX(-50%); 
+  }
+
+  .timeline-empty { 
+    order: 1; 
+    display: none; 
+  }
+  
+  .row-right .timeline-card { 
+    order: 3; 
+  }
+  .row-right .timeline-empty { 
+    order: 1; 
+  }
 }
 
 @keyframes infinite-slide {
