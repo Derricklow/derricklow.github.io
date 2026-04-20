@@ -13,8 +13,6 @@ gsap.to("#timeline-progress", {
     }
 });
 
-// 每个节点：用 timeline-dot 作为 trigger（不是 row）
-// 这样 dot 到达视窗中心时才触发，不会提前亮
 let rows = document.querySelectorAll('.timeline-row');
 rows.forEach(function(row) {
     let dot = row.querySelector('.timeline-dot');

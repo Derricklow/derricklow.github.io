@@ -77,14 +77,11 @@ html {
   animation: infinite-slide 25s linear infinite;
 }
 
-.slide-track:hover {
-  animation-play-state: paused;
-}
-
 .slide-item {
   flex-shrink: 0;
   text-align: center;
   padding: 0 4rem;
+  user-select: none;
 }
 
 .slide-item img {
@@ -100,7 +97,6 @@ html {
   height: auto;
 }
 
-/* ===== Company Timeline ===== */
 #timeline-container {
   position: relative;
 }
@@ -111,7 +107,7 @@ html {
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #e5e7eb;              /* 灰色底线，适配浅色主题 */
+  background: #e5e7eb;
   transform: translateX(-50%);
 }
 
@@ -122,27 +118,22 @@ html {
   transition: height 0.1s linear;
 }
 
-/* 每行结构：timeline-card + timeline-center + timeline-empty */
 .timeline-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  column-gap: 2rem;
   align-items: center;
   margin-bottom: 4rem;
   position: relative;
 }
 
-/* 默认 order：card(1) center(2) empty(3) = 卡片在左 */
-.timeline-card  { flex: 1; padding: 0 2rem; order: 1; }
-.timeline-center { flex-shrink: 0; width: 3px; display: flex; justify-content: center; position: relative; z-index: 2; order: 2; }
-.timeline-empty { flex: 1; padding: 0 2rem; order: 3; }
+.timeline-row .company-card { grid-column: 1; grid-row: 1; }
+.timeline-row .timeline-dot { grid-column: 2; grid-row: 1; z-index: 2; }
+.row-right .company-card    { grid-column: 3; }
 
-/* row-right：card(3) center(2) empty(1) = 卡片在右 */
-.row-right .timeline-card  { order: 3; }
-.row-right .timeline-empty { order: 1; }
-
-/* Diamond icon 替代圆点 */
 .timeline-dot {
   font-size: 1rem;
-  color: #d1d5db;                   /* 默认灰色 */
+  color: #d1d5db;
   transition: all 0.4s ease;
 }
 
@@ -151,7 +142,6 @@ html {
   filter: drop-shadow(0 0 8px rgba(0, 188, 125, 0.6));
 }
 
-/* 公司卡片 */
 .company-card {
   background: white;
   border: 1px solid #e5e7eb;
@@ -174,37 +164,21 @@ html {
     left: 1rem;
   }
 
-  .timeline-card { 
-    order: 3; 
-    flex: none; 
-    width: 100%; 
-    padding: 0 0 0 2.5rem; 
+  .timeline-row {
+    grid-template-columns: 2rem 1fr;
+    column-gap: 1rem;
   }
 
-  .timeline-center { 
-    order: 2; 
-    position: absolute; 
-    left: 1rem; 
-    transform: translateX(-50%); 
+  .timeline-row .timeline-dot {
+    grid-column: 1;
+    justify-self: center;
   }
 
-  .timeline-empty { 
-    order: 1; 
-    display: none; 
-  }
-  
-  .row-right .timeline-card { 
-    order: 3; 
-  }
-  .row-right .timeline-empty { 
-    order: 1; 
+  .timeline-row .company-card,
+  .row-right .company-card {
+    grid-column: 2;
   }
 }
-
-@keyframes infinite-slide {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-} 
 
   .carousel {
     position: relative;
@@ -257,6 +231,11 @@ html {
   .controls button:hover {
     background: #666;
   }
+  
+@keyframes infinite-slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+} 
 
 @keyframes fadeInUp {
 	0% {
