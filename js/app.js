@@ -1,4 +1,3 @@
-/* Variable Declaration */
 let wordIndex = 0;
 let letterIndex = 0;
 let isDeleting = false;
@@ -7,12 +6,10 @@ let deletingSpeed = 60;
 let pauseBetweenWords = 1500;
 let body = document.body;
 
-/* Element References */
 const dynamicText = document.getElementById('dynamic-text');
 const counterList = document.getElementById('counter-list');
 const words = ["Low Jin Hui", "Full Stack Developer", "Junior Web Developer"];
 
-/* Event Listeners */
 window.addEventListener('scroll', function(e) {
     const header = document.getElementById('sticky-header');
     if (window.scrollY > 200) {
@@ -44,13 +41,10 @@ let isMobileMenuOpen = false;
 menuIcons.forEach((icon) => icon.addEventListener('click', toggleMobileMenu));
 mobileMenuLinks.forEach((link) => link.addEventListener('click', closeMobileMenu));
 
-/* Initialize */
 type();
 initFadeInObserver();
 initCountObserver();
-// initProjectModal();
 
-/* Functions */
 function type() {
     const currentWord = words[wordIndex];
 
@@ -338,7 +332,6 @@ function updateCarousel() {
     });
 }
 
-/* Support Functions */
 function easeOutCubic(t) {
     return 1 - Math.pow(1 - t, 3);
 }
