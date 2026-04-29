@@ -52,3 +52,10 @@ This site is deployed automatically via [GitHub Pages](https://pages.github.com/
 ## License
 
 MIT License - see [LICENSE](LICENSE) for details.
+
+## 备注
+- 项目作者母语不是英文，请用**简单的中文**沟通
+- 偏好**简洁清晰**的代码，不追求过度抽象
+- 学习导向，希望理解原理而不只是复制代码
+- 遵循 **YAGNI** 原则：不做"可能需要"的功能，只做"现在需要"的
+- 遵循 **"Make it work → Make it right → Make it fast"** 的顺序
