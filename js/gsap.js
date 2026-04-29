@@ -1,7 +1,6 @@
 
 gsap.registerPlugin(ScrollTrigger);
 
-// 进度条：跟随滚动
 gsap.to("#timeline-progress", {
     height: "100%",
     ease: "none",
@@ -21,7 +20,6 @@ rows.forEach(function(row) {
     ScrollTrigger.create({
         trigger: dot,
         start: "top 60%",
-        // end: "bottom 40%",
         toggleClass: { targets: dot, className: "active" },
         onEnter: function() {
             if (card) card.classList.add("active");
